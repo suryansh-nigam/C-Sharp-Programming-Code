@@ -145,6 +145,30 @@ namespace _2DArray
                Console.WriteLine();
             }
 
+                // -----------Left diagonal sum and Right diagonal sum of a square matrix-----------------
+                Console.WriteLine("Diagonal sums of a square matrix:");
+                int[,] matrix = new int[3, 3]
+                {
+                    {1, 2,3},
+                    {4, 5,6},
+                    {9, 8,9}
+                };
+            
+                int n = matrix.GetLength(0);
+                int leftSum = 0;
+                int rightSum = 0;
+            
+                for (int i = 0; i < n; i++)
+                {
+                    leftSum += matrix[i, i];
+                    rightSum += matrix[i, n-1-i];
+                }
+            
+                Console.WriteLine("Left Diagonal Sum: " + leftSum);
+                Console.WriteLine("Right Diagonal Sum: " + rightSum);
+            
+            }
+
             //--Ask the user to enter the number of rows and columns. Read all elements of the array . Print the array in matrix form. --
             
             Console.Write("Enter number of rows:");
