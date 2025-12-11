@@ -1,15 +1,54 @@
 LINQ Query Examples in C#
 
+LINQ stands for Language Integrated Query.
+
+In C# 3.0 Microsoft has introduced a new language known as “LINQ” much like SQL (which we use 
+universally with Relational Databases to perform queries). LINQ allows you to write query expressions (similar to 
+SQL Queries) that can retrieve information from a wide variety of Data Sources like Objects, Databases and XML.
+
+LINQ is a data querying methodology which 
+provides querying capabilities to .NET languages with syntax like an SQL Query.  
+ 
+LINQ has a great power of querying on any source of data, where the Data Source could be collections of 
+objects (arrays & collections), Database or XML Source and it is divided into 3 parts: 
+
+LINQ to Objects:  
+-->  Used to perform queries against the in-memory data like an Array or Collection. 
+ 
+LINQ to XML (XLinq):  
+--> Used to perform queries against an XML Source.  
+ 
+LINQ to Databases: under this we again have 2 options like, 
+-->  LINQ to SQL is used to perform queries against a Relation Database, but only Microsoft SQL Server. 
+-->  LINQ to Entities is used to perform queries against any Relation Database like SQL Server, Oracle, etc.  
+
+ Advantages of LINQ: 
+-->  LINQ offers an object-based, language-integrated way to Query over data, no matter where that data came 
+     from. So, through LINQ we can query Database, XML as well as Collections & Arrays.  
+
+ -->  Compile-time syntax checking. 
+
+ --> It allows you to Query - Collections, Arrays, and classes etc. in the native language of your application like VB 
+or C# or F# with out using SQL Syntax’s. 
+
+=> LINQ to Objects 
+------------------
+This is designed to write queries against the in-memory data like an array or collection and filter or sort 
+
+the information present under them. Syntax of the query we want to use on objects will be as following: 
+
+      from <alias> in <array name | collection name> [<clauses>] select <alias> | new {<Column List>} 
+
 -- LINQ-Query starts with from and ends with select. 
 -- In clauses we need to use the alias name just like we use column names in SQL in case of scalar types. 
 -- Clauses in LINQ are where, group by and order by. 
 -- To use LINQ in your application first we need to import “System.Linq” namespace.
 
+ 
+== > A relational database is a type of database that stores data in tables (rows + columns), and these tables are linked to each other using relationships.
 
--- Syntax of the query we want to use on objects will be as following: 
-
-==>  from <alias> in <array name | collection name> [<clauses>] select <alias> | new {<Column List>}
-
+== > An entity is any real-world object or concept about which you want to store data in a database.
+ 
 1. orderby
 
  Used to sort the data in ascending or descending order.
@@ -111,4 +150,3 @@ namespace LINQExamples
     }
 
 }
-
