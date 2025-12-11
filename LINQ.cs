@@ -1,5 +1,33 @@
 LINQ Query Examples in C#
 
+-- LINQ-Query starts with from and ends with select. 
+-- In clauses we need to use the alias name just like we use column names in SQL in case of scalar types. 
+-- Clauses in LINQ are where, group by and order by. 
+-- To use LINQ in your application first we need to import “System.Linq” namespace.
+
+
+-- Syntax of the query we want to use on objects will be as following: 
+
+==>  from <alias> in <array name | collection name> [<clauses>] select <alias> | new {<Column List>}
+
+1. orderby
+
+ Used to sort the data in ascending or descending order.
+
+2. IndexOf()
+
+ Returns the index (position) of a character or substring inside a string.
+
+3. Substring()
+
+ Extracts a part of a string from a specific starting index.
+
+4. Contains()
+
+ Checks whether a string or collection contains the specified value.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
